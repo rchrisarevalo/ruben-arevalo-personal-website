@@ -8,7 +8,13 @@ import PersonalPhotography from "./images/personal-photography-3.jpg";
 import UTRGVGrad from "./images/UTRGV Grad Photo May 2023.jpg";
 import STCGrad from "./images/STC Grad Photo May 2019.jpg";
 import AECHSGrad from "./images/AECHS Grad Photo May 2019.jpg";
+import DatingWebApp from "./images/dating-web-app-sample.png";
+import PersonalWebsiteReact from "./images/personal-website-react-sample.png";
+import CVWebsite from "./images/cv-website-sample.jpg";
+import FPI from "./images/food-pantry-inventory-sample.jpg";
+import AIChatbot from "./images/ai-chatbot-sample.jpg";
 import Link from "next/link";
+import SkillLabel from "./components/SkillLabel";
 
 export default function Home() {
   return (
@@ -273,10 +279,139 @@ export default function Home() {
         </PageSection>
         <hr className="bg-slate-50 pt-1 w-full"></hr>
         <PageSection id="projects">
-          <section className="grid grid-cols-1 max-sm:grid-cols-1 w-full max-sm:space-y-10 space-y-12">
+          <section className="grid grid-cols-1 max-sm:grid-cols-1 w-full">
             <h1 className="text-4xl font-[800] ml-16 mr-16 max-sm:ml-12 max-sm:mr-12">
               Projects
             </h1>
+            <br></br>
+            <span className="grid grid-cols-2 max-sm:grid-cols-1 items-center w-full space-y-5">
+              <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
+                <img
+                  src={AIChatbot.src}
+                  className="w-[500px] h-[500px] object-cover items-center rounded-2xl"
+                  alt="Ruben Arevalo Dating Web App Sample"
+                />
+                <br></br>
+                <h1 className="text-3xl font-[900]">AI Chatbot</h1>
+                <i className="font-thin text-lg">August 2024</i>
+                <p className="text-lg">
+                  Based on an early prototype of a hackathon project, which
+                  became the precursor to our final project, IncludiTrip, this
+                  AI chatbot project was built with a team of 4, with the Groq
+                  API being integrated with a system prompt that will help the
+                  user receive suggested travel destinations based on relevant
+                  information, such as travel dates, budget range, destination
+                  (city and state), etc.
+                </p>
+                <br></br>
+                <span className="flex flex-row flex-wrap">
+                  <SkillLabel skillName="Next.js" />
+                  <SkillLabel skillName="React" />
+                  <SkillLabel skillName="Google Firebase" />
+                  <SkillLabel skillName="TypeScript" />
+                  <SkillLabel skillName="Groq API" />
+                  <SkillLabel skillName="Tailwind" />
+                </span>
+              </span>
+              <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
+                <img
+                  src={FPI.src}
+                  className="w-[500px] h-[500px] object-cover items-center rounded-2xl"
+                  alt="Ruben Arevalo Dating Web App Sample"
+                />
+                <br></br>
+                <h1 className="text-3xl font-[900]">FoodPantryInventory</h1>
+                <i className="font-thin text-lg">July 2024 - August 2024</i>
+                <p className="text-lg">
+                  One of the first AI-powered websites I built, this website
+                  revolves around storing items and the quantity of said item in
+                  a database. Furthermore, generative AI was incorporated to
+                  generate a list of 5 suggested recipes based on the current
+                  items stored in the pantry.
+                </p>
+                <br></br>
+                <span className="flex flex-row flex-wrap">
+                  <SkillLabel skillName="Next.js" />
+                  <SkillLabel skillName="React" />
+                  <SkillLabel skillName="TypeScript" />
+                  <SkillLabel skillName="Tailwind" />
+                  <SkillLabel skillName="Google Firebase" />
+                  <SkillLabel skillName="Material UI" />
+                  <SkillLabel skillName="OpenAI API" />
+                </span>
+              </span>
+              <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
+                <img
+                  src={DatingWebApp.src}
+                  className="w-[500px] h-[500px] object-cover items-center rounded-2xl"
+                  alt="Ruben Arevalo Dating Web App Sample"
+                />
+                <br></br>
+                <h1 className="text-3xl font-[900]">Dating Web App</h1>
+                <i className="font-thin text-lg">June 2023 - Present</i>
+                <p className="text-lg">
+                  I am currently building a dating web application based on a
+                  model helps promote self-esteem and laying down the proper
+                  foundation for a successful future relationship between two
+                  people.
+                </p>
+                <br></br>
+                <span className="flex flex-row flex-wrap">
+                  <SkillLabel skillName="React" />
+                  <SkillLabel skillName="CSS" />
+                  <SkillLabel skillName="TypeScript" />
+                  <SkillLabel skillName="FastAPI" />
+                  <SkillLabel skillName="Express.js" />
+                  <SkillLabel skillName="PostgreSQL" />
+                </span>
+              </span>
+              <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
+                <img
+                  src={PersonalWebsiteReact.src}
+                  className="w-[500px] h-[500px] object-cover items-center rounded-2xl"
+                  alt="Ruben Arevalo Dating Web App Sample"
+                />
+                <br></br>
+                <h1 className="text-3xl font-[900]">
+                  Personal Website (React)
+                </h1>
+                <i className="font-thin text-lg">July 2021 - September 2021</i>
+                <p className="text-lg">
+                  Before making my landing page, I built a personal website that
+                  would display information about me, provide announcements to
+                  those visiting the site, display works, and allow people to
+                  contact me for questions.
+                </p>
+                <br></br>
+                <span className="flex flex-row flex-wrap">
+                  <SkillLabel skillName="React" />
+                  <SkillLabel skillName="CSS" />
+                  <SkillLabel skillName="React Bootstrap" />
+                  <SkillLabel skillName="FastAPI" />
+                </span>
+              </span>
+              <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
+                <img
+                  src={CVWebsite.src}
+                  className="w-[500px] h-[500px] object-cover items-center rounded-2xl"
+                  alt="Ruben Arevalo Dating Web App Sample"
+                />
+                <br></br>
+                <h1 className="text-3xl font-[900]">CV Website</h1>
+                <i className="font-thin text-lg">June 2021 - July 2021</i>
+                <p className="text-lg">
+                  One of my first websites, I built this website using only HTML
+                  and CSS. This website contains basic, but important details
+                  about my background, such as who I am, my education, my work
+                  experience, what software projects I built, etc.
+                </p>
+                <br></br>
+                <span className="flex flex-row flex-wrap">
+                  <SkillLabel skillName="HTML" />
+                  <SkillLabel skillName="CSS" />
+                </span>
+              </span>
+            </span>
           </section>
         </PageSection>
       </main>
