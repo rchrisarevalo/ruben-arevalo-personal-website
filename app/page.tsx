@@ -1,4 +1,7 @@
+'use client';
 import Nav from "./components/Nav";
+import ReactGA from 'react-ga4';
+import { useEffect } from "react";
 import "@fontsource/raleway";
 import PageSection from "./components/PageSection";
 import ProfilePic from "./images/Profile Pic (September 2024).jpg";
@@ -22,6 +25,15 @@ import Footer from "./components/Footer";
 import ViewProjectBtn from "./components/ViewProjectBtn";
 
 export default function Home() {
+
+  useEffect(() => {
+    ReactGA.send({
+      hitType: 'pageview',
+      page: '/',
+      title: 'Personal Website Page'
+    })
+  }, [])
+
   return (
     <div className="bg-[#020c27] font-['Raleway'] items-center justify-items-center min-h-screen w-full">
       <main className="flex flex-col items-center sm:items-start max-sm:mt-[0vh]">
@@ -269,7 +281,7 @@ export default function Home() {
             </span>
             <br></br>
             <span className="flex flex-row items-center justify-center text-center">
-              <p className="text-xl font-[900]">
+              <p className="text-xl font-[900] max-sm:ml-10 max-sm:mr-10">
                 For more past experiences, visit my{" "}
                 <a
                   href="https://www.linkedin.com/in/rchrisarevalo/"
@@ -311,7 +323,7 @@ export default function Home() {
                   resources that the destinations may offer to accommodate their needs.
                 </p>
                 <br></br>
-                <span className="flex flex-row flex-wrap">
+                <span className="max-sm:grid max-sm:grid-cols-3 flex flex-row flex-wrap">
                   <SkillLabel skillName="Next.js" />
                   <SkillLabel skillName="React" />
                   <SkillLabel skillName="TypeScript" />
@@ -342,7 +354,7 @@ export default function Home() {
                   accurate responses.
                 </p>
                 <br></br>
-                <span className="flex flex-row flex-wrap">
+                <span className="max-sm:grid max-sm:grid-cols-3 flex flex-row flex-wrap">
                   <SkillLabel skillName="Next.js" />
                   <SkillLabel skillName="React" />
                   <SkillLabel skillName="TypeScript" />
@@ -373,7 +385,7 @@ export default function Home() {
                   retain concepts better and more efficiently.
                 </p>
                 <br></br>
-                <span className="flex flex-row flex-wrap">
+                <span className="max-sm:grid max-sm:grid-cols-3 flex flex-row flex-wrap">
                   <SkillLabel skillName="Next.js" />
                   <SkillLabel skillName="React" />
                   <SkillLabel skillName="Tailwind" />
@@ -404,7 +416,7 @@ export default function Home() {
                   destination (city and state), etc.
                 </p>
                 <br></br>
-                <span className="flex flex-row flex-wrap">
+                <span className="max-sm:grid max-sm:grid-cols-3 flex flex-row flex-wrap">
                   <SkillLabel skillName="Next.js" />
                   <SkillLabel skillName="React" />
                   <SkillLabel skillName="Google Firebase" />
@@ -432,7 +444,7 @@ export default function Home() {
                   items stored in the pantry.
                 </p>
                 <br></br>
-                <span className="flex flex-row flex-wrap">
+                <span className="max-sm:grid max-sm:grid-cols-3 flex flex-row flex-wrap">
                   <SkillLabel skillName="Next.js" />
                   <SkillLabel skillName="React" />
                   <SkillLabel skillName="TypeScript" />
@@ -460,7 +472,7 @@ export default function Home() {
                   people.
                 </p>
                 <br></br>
-                <span className="flex flex-row flex-wrap">
+                <span className="max-sm:grid max-sm:grid-cols-3 flex flex-row flex-wrap">
                   <SkillLabel skillName="React" />
                   <SkillLabel skillName="CSS" />
                   <SkillLabel skillName="TypeScript" />
@@ -489,7 +501,7 @@ export default function Home() {
                   contact me for questions.
                 </p>
                 <br></br>
-                <span className="flex flex-row flex-wrap">
+                <span className="max-sm:grid max-sm:grid-cols-3 flex flex-row flex-wrap">
                   <SkillLabel skillName="React" />
                   <SkillLabel skillName="CSS" />
                   <SkillLabel skillName="React Bootstrap" />
@@ -514,7 +526,7 @@ export default function Home() {
                   experience, what software projects I built, etc.
                 </p>
                 <br></br>
-                <span className="flex flex-row flex-wrap">
+                <span className="max-sm:grid max-sm:grid-cols-3 flex flex-row flex-wrap">
                   <SkillLabel skillName="HTML" />
                   <SkillLabel skillName="CSS" />
                 </span>
