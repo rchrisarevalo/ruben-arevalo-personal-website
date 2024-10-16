@@ -45,7 +45,7 @@ export default function Home() {
             <span className="text-center space-y-2 flex flex-col items-center justify-center">
               <ul className="list-none space-y-5 max-sm:space-y-2 max-sm:mt-10">
                 <li className="p-3 pl-5 pr-5 rounded-xl border-2 border-solid border-white">
-                  <Link href="./docs/Arevalo, Ruben - Resume (September 2024).pdf">
+                  <Link href="https://rubenarevalo.com">
                     View Resume
                   </Link>
                 </li>
