@@ -20,7 +20,7 @@ const Nav = () => {
             <Link href="#experience" className="p-2 pl-6 pr-6 rounded-lg transition ease-in-out hover:bg-white hover:text-black">Experience</Link>
           </li>
           <li>
-          <Link href="#about" className="p-2 pl-6 pr-6 rounded-lg transition ease-in-out hover:bg-white hover:text-black">Projects</Link>
+            <Link href="#projects" className="p-2 pl-6 pr-6 rounded-lg transition ease-in-out hover:bg-white hover:text-black">Projects</Link>
           </li>
         </ul>
       </span>
