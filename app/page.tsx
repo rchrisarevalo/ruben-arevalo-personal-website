@@ -36,7 +36,7 @@ export default function Home() {
 
   return (
     <div className="bg-[#020c27] font-['Raleway'] items-center justify-items-center min-h-screen w-full">
-      <main className="flex flex-col items-center sm:items-start max-sm:mt-[0vh]">
+      <main className="flex flex-col items-center sm:items-start max-sm:mt-[0vh] text-white">
         <Nav />
         <PageSection id="home">
           <section className="grid grid-cols-2 max-sm:grid-cols-1 w-full">
