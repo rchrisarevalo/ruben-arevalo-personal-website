@@ -13,12 +13,17 @@ import PersonalWebsiteReact from "./images/personal-website-react-sample.png";
 import CVWebsite from "./images/cv-website-sample.jpg";
 import FPI from "./images/food-pantry-inventory-sample.jpg";
 import AIChatbot from "./images/ai-chatbot-sample.jpg";
+import BrainflashAI from "./images/brainflash-sample.jpg";
+import RateTeachAI from "./images/rateteachai-sample.jpg";
+import IncludiTripLogo from "./images/includitrip-logo.png";
 import Link from "next/link";
 import SkillLabel from "./components/SkillLabel";
+import Footer from "./components/Footer";
+import ViewProjectBtn from "./components/ViewProjectBtn";
 
 export default function Home() {
   return (
-    <div className="bg-cyan-950 font-['Raleway'] items-center justify-items-center min-h-screen w-full">
+    <div className="bg-[#020c27] font-['Raleway'] items-center justify-items-center min-h-screen w-full">
       <main className="flex flex-col items-center sm:items-start max-sm:mt-[0vh]">
         <Nav />
         <PageSection id="home">
@@ -262,9 +267,10 @@ export default function Home() {
                 </li>
               </ul>
             </span>
+            <br></br>
             <span className="flex flex-row items-center justify-center text-center">
               <p className="text-xl font-[900]">
-                For more past job experiences, visit my{" "}
+                For more past experiences, visit my{" "}
                 <a
                   href="https://www.linkedin.com/in/rchrisarevalo/"
                   target="_none"
@@ -287,6 +293,100 @@ export default function Home() {
             <span className="grid grid-cols-2 max-sm:grid-cols-1 items-center w-full space-y-5">
               <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
                 <img
+                  src={IncludiTripLogo.src}
+                  className="w-[500px] h-[500px] object-cover items-center rounded-2xl"
+                  alt="Ruben Arevalo Dating Web App Sample"
+                />
+                <br></br>
+                <h1 className="text-3xl font-[900]">IncludiTrip</h1>
+                <i className="font-thin text-lg">August 2024 - Present</i>
+                <p className="text-lg">
+                  A project <b>currently in development</b> and in the{" "}
+                  <b>general public beta stage</b>, the purpose of this product
+                  is to generate personalized itineraries--a feature currently
+                  in the works--for people with disabilities and who are looking
+                  to travel. Generative AI is used to analyze information such
+                  as travel dates, budget range, and destination to provide them
+                  with suggested destinations, hotels, and information on accessibility
+                  resources that the destinations may offer to accommodate their needs.
+                </p>
+                <br></br>
+                <span className="flex flex-row flex-wrap">
+                  <SkillLabel skillName="Next.js" />
+                  <SkillLabel skillName="React" />
+                  <SkillLabel skillName="TypeScript" />
+                  <SkillLabel skillName="Tailwind" />
+                  <SkillLabel skillName="Groq API" />
+                  <SkillLabel skillName="Booking.com API" />
+                  <SkillLabel skillName="Google Firebase" />
+                </span>
+                <br></br>
+                <ViewProjectBtn link="https://includitrip.com/" />
+              </span>
+              <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
+                <img
+                  src={RateTeachAI.src}
+                  className="w-[500px] h-[500px] object-cover items-center rounded-2xl"
+                  alt="Ruben Arevalo Dating Web App Sample"
+                />
+                <br></br>
+                <h1 className="text-3xl font-[900]">RateTeach AI</h1>
+                <i className="font-thin text-lg">August 2024</i>
+                <p className="text-lg">
+                  Based and inspired by the concept used by the RateMyProfessor
+                  website, this AI-powered web application was built utilizing
+                  the concepts of retrieval augmented generation--also known as
+                  RAG--utilizing Python, Jupyter Notebook, and Pinecone, to
+                  store data embeddings in a vector database to use as an
+                  external source of information to provide personalized and
+                  accurate responses.
+                </p>
+                <br></br>
+                <span className="flex flex-row flex-wrap">
+                  <SkillLabel skillName="Next.js" />
+                  <SkillLabel skillName="React" />
+                  <SkillLabel skillName="TypeScript" />
+                  <SkillLabel skillName="Tailwind" />
+                  <SkillLabel skillName="Pinecone" />
+                  <SkillLabel skillName="OpenAI API" />
+                  <SkillLabel skillName="Jupyter Notebook" />
+                  <SkillLabel skillName="Python" />
+                </span>
+                <br></br>
+                <ViewProjectBtn link="https://ai-rmp-lemon.vercel.app/" />
+              </span>
+              <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
+                <img
+                  src={BrainflashAI.src}
+                  className="w-[500px] h-[500px] object-cover items-center rounded-2xl"
+                  alt="Ruben Arevalo Dating Web App Sample"
+                />
+                <br></br>
+                <h1 className="text-3xl font-[900]">BrainflashAI</h1>
+                <i className="font-thin text-lg">August 2024</i>
+                <p className="text-lg">
+                  Built by me and my team of 3, this AI-powered flashcard app
+                  takes in a user prompt--whether it'd be a series of lecture
+                  notes, bullet points, or a question asked by the user--and
+                  transforms its content into easy-to-use flashcards, helping
+                  those using the product better memorize, understand, and
+                  retain concepts better and more efficiently.
+                </p>
+                <br></br>
+                <span className="flex flex-row flex-wrap">
+                  <SkillLabel skillName="Next.js" />
+                  <SkillLabel skillName="React" />
+                  <SkillLabel skillName="Tailwind" />
+                  <SkillLabel skillName="Google Firebase" />
+                  <SkillLabel skillName="Clerk" />
+                  <SkillLabel skillName="OpenAI API" />
+                  <SkillLabel skillName="TypeScript" />
+                </span>
+                <br></br>
+                <ViewProjectBtn link="https://brainflashai.com/" />
+              </span>
+              <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
+                <img
                   src={AIChatbot.src}
                   className="w-[500px] h-[500px] object-cover items-center rounded-2xl"
                   alt="Ruben Arevalo Dating Web App Sample"
@@ -297,11 +397,11 @@ export default function Home() {
                 <p className="text-lg">
                   Based on an early prototype of a hackathon project, which
                   became the precursor to our final project, IncludiTrip, this
-                  AI chatbot project was built with a team of 4, with the Groq
-                  API being integrated with a system prompt that will help the
-                  user receive suggested travel destinations based on relevant
-                  information, such as travel dates, budget range, destination
-                  (city and state), etc.
+                  AI chatbot project was built by me and my team of 3, with the
+                  Groq API being integrated with a system prompt that will help
+                  the user receive suggested travel destinations based on
+                  relevant information, such as travel dates, budget range,
+                  destination (city and state), etc.
                 </p>
                 <br></br>
                 <span className="flex flex-row flex-wrap">
@@ -312,6 +412,8 @@ export default function Home() {
                   <SkillLabel skillName="Groq API" />
                   <SkillLabel skillName="Tailwind" />
                 </span>
+                <br></br>
+                <ViewProjectBtn link="https://wanderai-chatbot.vercel.app/" />
               </span>
               <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
                 <img
@@ -339,6 +441,8 @@ export default function Home() {
                   <SkillLabel skillName="Material UI" />
                   <SkillLabel skillName="OpenAI API" />
                 </span>
+                <br></br>
+                <ViewProjectBtn link="https://foodpantryinventory-ai.vercel.app/" />
               </span>
               <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
                 <img
@@ -364,6 +468,8 @@ export default function Home() {
                   <SkillLabel skillName="Express.js" />
                   <SkillLabel skillName="PostgreSQL" />
                 </span>
+                <br></br>
+                <ViewProjectBtn link="https://rchrisarevalo-dev.onrender.com/portfolio" />
               </span>
               <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
                 <img
@@ -389,6 +495,8 @@ export default function Home() {
                   <SkillLabel skillName="React Bootstrap" />
                   <SkillLabel skillName="FastAPI" />
                 </span>
+                <br></br>
+                <ViewProjectBtn link="https://rchrisarevalo-dev.onrender.com" />
               </span>
               <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
                 <img
@@ -410,10 +518,13 @@ export default function Home() {
                   <SkillLabel skillName="HTML" />
                   <SkillLabel skillName="CSS" />
                 </span>
+                <br></br>
+                <ViewProjectBtn link="https://rchrisarevalo.github.io/cv-website" />
               </span>
             </span>
           </section>
         </PageSection>
+        <Footer />
       </main>
     </div>
   );
