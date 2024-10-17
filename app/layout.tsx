@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import InitializeAnalytics from "./components/InitializeAnalytics";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   authors: {
@@ -21,6 +23,8 @@ export default function RootLayout({
         className={`antialiased`}
       >
         {children}
+        <InitializeAnalytics />
+        <Analytics mode={'production'} />
       </body>
     </html>
   );
