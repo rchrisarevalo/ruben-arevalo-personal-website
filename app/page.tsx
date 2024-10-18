@@ -99,7 +99,7 @@ export default function Home() {
                 what I learned into finding solutions for real-world problems.
               </p>
             </span>
-            <span className="text-center space-y-2 grid grid-cols-2 place-items-center max-sm:mt-24 max-sm:mb-24">
+            <span className="text-center space-y-2 grid grid-cols-2 max-sm:grid-cols-1 place-items-center max-sm:mt-24 max-sm:mb-24">
               <img
                 src={Coding.src}
                 alt="Ruben Arevalo Coding"
