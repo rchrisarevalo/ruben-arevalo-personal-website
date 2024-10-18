@@ -23,11 +23,9 @@ import Link from "next/link";
 import SkillLabel from "./components/SkillLabel";
 import Footer from "./components/Footer";
 import ViewProjectBtn from "./components/ViewProjectBtn";
-import { thisWorks } from "@/analytics";
 
 export default function Home() {
   useEffect(() => {
-    thisWorks();
     ReactGA.send({
       hitType: 'pageview',
       page: '/',

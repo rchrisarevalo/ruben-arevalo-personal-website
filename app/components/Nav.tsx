@@ -4,7 +4,7 @@ import React from "react";
 const Nav = () => {
   return (
     <nav className="z-10 flex bg-black bg-opacity-75 items-center justify-between flex-row fixed top-0 w-full p-7">
-      <span className="text-2xl font-semibold">Ruben Arevalo</span>
+      <span className="text-2xl font-semibold"><a href="/">Ruben Arevalo</a></span>
       <span className="text-lg font-thin max-sm:hidden">
         <ul className="flex flex-row gap-2 cursor-pointer">
           <li>
