@@ -9,7 +9,8 @@ export const metadata: Metadata = {
   },
   title: "Ruben Arevalo",
   description: "Software Engineer",
-  keywords: 'Ruben Arevalo, Ruben C. Arevalo, Software Developer, Ruben Arevalo Software Engineer'
+  keywords: 'Ruben Arevalo, Ruben C. Arevalo, Software Developer, Ruben Arevalo Software Engineer',
+  metadataBase: new URL('https://rubenarevalo.com')
 };
 
 export default function RootLayout({
