@@ -7,7 +7,7 @@ const Footer = () => {
         <span className="flex">
           <p className="text-md">
             <span className="max-sm:hidden">© 2024 Ruben Christopher Arevalo. All rights reserved.</span>
-            <span className="max-xl:hidden">© 2024 Ruben Christopher Arevalo. <br></br> All rights reserved.</span>
+            <span className="max-xl:hidden max-sm:block">© 2024 Ruben Christopher Arevalo. <br></br> All rights reserved.</span>
           </p>
         </span>
         <span>
