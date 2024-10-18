@@ -1,6 +1,6 @@
-'use client';
+"use client";
 import Nav from "./components/Nav";
-import ReactGA from 'react-ga4';
+import ReactGA from "react-ga4";
 import { useEffect } from "react";
 import "@fontsource/raleway";
 import PageSection from "./components/PageSection";
@@ -23,17 +23,15 @@ import Link from "next/link";
 import SkillLabel from "./components/SkillLabel";
 import Footer from "./components/Footer";
 import ViewProjectBtn from "./components/ViewProjectBtn";
-import { thisWorks } from "@/analytics";
 
 export default function Home() {
   useEffect(() => {
-    thisWorks();
     ReactGA.send({
-      hitType: 'pageview',
-      page: '/',
-      title: 'Personal Website Page'
-    })
-  }, [])
+      hitType: "pageview",
+      page: "/",
+      title: "Personal Website Page",
+    });
+  }, []);
 
   return (
     <div className="bg-[#020c27] font-['Raleway'] items-center justify-items-center min-h-screen w-full">
@@ -58,9 +56,7 @@ export default function Home() {
             <span className="text-center space-y-2 flex flex-col items-center justify-center">
               <ul className="list-none space-y-5 max-sm:space-y-2 max-sm:mt-10">
                 <li className="p-3 pl-5 pr-5 rounded-xl border-2 border-solid border-white">
-                  <Link href="https://rubenarevalo.com">
-                    View Resume
-                  </Link>
+                  <Link href="https://rubenarevalo.com">View Resume</Link>
                 </li>
                 <li className="p-3 pl-5 pr-5 rounded-xl border-2 border-solid border-white">
                   <Link href="#about">About Me</Link>
@@ -303,7 +299,7 @@ export default function Home() {
               Projects
             </h1>
             <br></br>
-            <span className="grid grid-cols-2 max-sm:grid-cols-1 items-center w-full space-y-5">
+            <span className="grid grid-cols-2 max-sm:grid-cols-1 items-center w-full space-y-5 max-sm:space-y-32">
               <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
                 <img
                   src={IncludiTripLogo.src}
@@ -320,8 +316,9 @@ export default function Home() {
                   in the works--for people with disabilities and who are looking
                   to travel. Generative AI is used to analyze information such
                   as travel dates, budget range, and destination to provide them
-                  with suggested destinations, hotels, and information on accessibility
-                  resources that the destinations may offer to accommodate their needs.
+                  with suggested destinations, hotels, and information on
+                  accessibility resources that the destinations may offer to
+                  accommodate their needs.
                 </p>
                 <br></br>
                 <span className="max-sm:grid max-sm:grid-cols-3 flex flex-row flex-wrap">
@@ -333,7 +330,6 @@ export default function Home() {
                   <SkillLabel skillName="Booking.com API" />
                   <SkillLabel skillName="Google Firebase" />
                 </span>
-                <br></br>
                 <ViewProjectBtn link="https://includitrip.com/" />
               </span>
               <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
@@ -365,7 +361,6 @@ export default function Home() {
                   <SkillLabel skillName="Jupyter Notebook" />
                   <SkillLabel skillName="Python" />
                 </span>
-                <br></br>
                 <ViewProjectBtn link="https://ai-rmp-lemon.vercel.app/" />
               </span>
               <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
@@ -395,7 +390,6 @@ export default function Home() {
                   <SkillLabel skillName="OpenAI API" />
                   <SkillLabel skillName="TypeScript" />
                 </span>
-                <br></br>
                 <ViewProjectBtn link="https://brainflashai.com/" />
               </span>
               <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
@@ -425,7 +419,6 @@ export default function Home() {
                   <SkillLabel skillName="Groq API" />
                   <SkillLabel skillName="Tailwind" />
                 </span>
-                <br></br>
                 <ViewProjectBtn link="https://wanderai-chatbot.vercel.app/" />
               </span>
               <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
@@ -454,7 +447,6 @@ export default function Home() {
                   <SkillLabel skillName="Material UI" />
                   <SkillLabel skillName="OpenAI API" />
                 </span>
-                <br></br>
                 <ViewProjectBtn link="https://foodpantryinventory-ai.vercel.app/" />
               </span>
               <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
@@ -481,7 +473,6 @@ export default function Home() {
                   <SkillLabel skillName="Express.js" />
                   <SkillLabel skillName="PostgreSQL" />
                 </span>
-                <br></br>
                 <ViewProjectBtn link="https://rchrisarevalo-dev.onrender.com/portfolio" />
               </span>
               <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
@@ -508,7 +499,6 @@ export default function Home() {
                   <SkillLabel skillName="React Bootstrap" />
                   <SkillLabel skillName="FastAPI" />
                 </span>
-                <br></br>
                 <ViewProjectBtn link="https://rchrisarevalo-dev.onrender.com" />
               </span>
               <span className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2">
@@ -531,7 +521,6 @@ export default function Home() {
                   <SkillLabel skillName="HTML" />
                   <SkillLabel skillName="CSS" />
                 </span>
-                <br></br>
                 <ViewProjectBtn link="https://rchrisarevalo.github.io/cv-website" />
               </span>
             </span>
