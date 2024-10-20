@@ -1,7 +1,7 @@
 "use client";
 import Nav from "./components/Nav";
 import ReactGA from "react-ga4";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import "@fontsource/raleway";
 import PageSection from "./components/PageSection";
 import ProfilePic from "./images/Profile Pic (September 2024).jpg";
@@ -23,8 +23,11 @@ import Link from "next/link";
 import SkillLabel from "./components/SkillLabel";
 import Footer from "./components/Footer";
 import ViewProjectBtn from "./components/ViewProjectBtn";
+import { Info } from "./types/types.config";
 
 export default function Home() {
+  const [info, setInfo] = useState<Info[]>([])
+
   useEffect(() => {
     ReactGA.send({
       hitType: "pageview",
@@ -32,6 +35,27 @@ export default function Home() {
       title: "Personal Website Page",
     });
   }, []);
+
+  useEffect(() => {
+    const fetchMsg = async () => {
+      try {
+        const res = await fetch('/api/info', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+  
+        if (res.ok) {
+          const data: Info[] = await res.json();
+          setInfo(data)
+        }
+      } catch (error) {
+        console.error(error)
+      }
+    }
+    fetchMsg();
+  }, [])
 
   return (
     <div className="bg-[#020c27] font-['Raleway'] items-center justify-items-center min-h-screen w-full">
