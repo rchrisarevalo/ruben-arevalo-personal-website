@@ -21,6 +21,7 @@ export type Project = {
 }
 
 export type Info = {
+    profile_pic: string,
     education: Education[],
     experience: Experience[],
     projects: Project[]

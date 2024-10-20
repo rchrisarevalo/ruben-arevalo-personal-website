@@ -26,7 +26,12 @@ import ViewProjectBtn from "./components/ViewProjectBtn";
 import { Info } from "./types/types.config";
 
 export default function Home() {
-  const [info, setInfo] = useState<Info>([])
+  const [info, setInfo] = useState<Info>({
+    profile_pic: "",
+    education: [],
+    experience: [],
+    projects: [],
+  });
 
   useEffect(() => {
     ReactGA.send({
@@ -39,24 +44,24 @@ export default function Home() {
   useEffect(() => {
     const fetchMsg = async () => {
       try {
-        const res = await fetch('/api/info', {
-          method: 'GET',
+        const res = await fetch("/api/info", {
+          method: "GET",
           headers: {
-            'Content-Type': 'application/json'
-          }
+            "Content-Type": "application/json",
+          },
         });
-  
+
         if (res.ok) {
           const data: Info = await res.json();
-          console.log(data)
-          setInfo(data)
+          console.log(data);
+          setInfo(data);
         }
       } catch (error) {
-        console.error(error)
+        console.error(error);
       }
-    }
+    };
     fetchMsg();
-  }, [])
+  }, []);
 
   return (
     <div className="bg-[#020c27] font-['Raleway'] items-center justify-items-center min-h-screen w-full">
@@ -67,7 +72,7 @@ export default function Home() {
             <span className="text-center space-y-2 flex items-center flex-col">
               <img
                 alt="Ruben Arevalo"
-                src={ProfilePic.src}
+                src={info.profile_pic}
                 className="w-[250px] h-[250px] object-contain rounded-full"
               />
               <br></br>
@@ -149,8 +154,11 @@ export default function Home() {
             <h1 className="text-4xl font-[800] ml-16 mr-16 max-sm:ml-12 max-sm:mr-12">
               Education
             </h1>
-            {info.education?.map((school, idx) => 
-              <span key={`education-${idx}`} className="grid grid-cols-2 max-sm:grid-cols-1 w-full space-y-5">
+            {info.education?.map((school, idx) => (
+              <span
+                key={`education-${idx}`}
+                className="grid grid-cols-2 max-sm:grid-cols-1 w-full space-y-5"
+              >
                 <span className="flex flex-col items-left justify-center space-y-5">
                   <h1 className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-bold text-xl">
                     <i>{school.school_name}</i>
@@ -163,12 +171,12 @@ export default function Home() {
                 </span>
                 <span className="flex flex-col items-center justify-center">
                   <img
-                    src={`data:image/png;base64,${school.photo}`}
+                    src={school.photo}
                     className="w-[300px] h-[300px] object-cover rounded-lg"
                   />
                 </span>
               </span>
-            )}
+            ))}
           </section>
         </PageSection>
         <hr className="bg-slate-50 pt-1 w-full"></hr>
@@ -177,90 +185,32 @@ export default function Home() {
             <h1 className="text-4xl font-[800] ml-16 mr-16 max-sm:ml-12 max-sm:mr-12">
               Experience
             </h1>
-            <span className="grid grid-cols-2 max-sm:grid-cols-1 w-full space-y-5">
-              <span className="flex flex-col items-left justify-center space-y-5">
-                <h1 className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-bold text-xl">
-                  <i>Independent Software Developer</i>
-                  <br></br>
-                  <i className="font-thin">Self-employed</i>
-                  <br></br>
-                  <i className="font-thin">May 2023 - Present</i>
-                </h1>
+            {info.experience?.map((exp, idx) => (
+              <span
+                key={`exp-${idx}`}
+                className="grid grid-cols-2 max-sm:grid-cols-1 w-full space-y-5"
+              >
+                <span className="flex flex-col items-left justify-center space-y-5">
+                  <h1 className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-bold text-xl">
+                    <i>{exp.title}</i>, {exp.employer}
+                    <br></br>
+                    <i className="font-thin">{exp.type}</i>
+                    <br></br>
+                    <i className="font-thin">{exp.duration}</i>
+                  </h1>
+                </span>
+                <ul className="flex flex-col items-left justify-between space-y-5 text-lg">
+                  {exp.responsibilities.map((res, res_idx) => (
+                    <li
+                      key={`${exp.title}-responsibility-${res_idx}`}
+                      className="list-disc ml-5 mr-5 max-sm:ml-16 max-sm:mr-16"
+                    >
+                      {res}
+                    </li>
+                  ))}
+                </ul>
               </span>
-              <ul className="flex flex-col items-left justify-between space-y-5 text-lg">
-                <li className="list-disc ml-5 mr-5 max-sm:ml-16 max-sm:mr-16">
-                  Coordinating with a team of 3 to develop and enhance a web
-                  application initiated during previous Headstarter SWE
-                  fellowship that generates travel itineraries for individuals
-                  with disabilities, currently with 27+ users.
-                </li>
-                <li className="list-disc ml-5 mr-5 max-sm:ml-16 max-sm:mr-16">
-                  Investing 25 hours/week on average refining knowledge in
-                  software development, using best practices, and learning new
-                  technologies.
-                </li>
-                <li className="list-disc ml-5 mr-5 max-sm:ml-16 max-sm:mr-16">
-                  Debugging and optimizing current projects using strategies
-                  such as code refactoring and run time analysis.
-                </li>
-              </ul>
-            </span>
-            <span className="grid grid-cols-2 max-sm:grid-cols-1 w-full space-y-5">
-              <span className="flex flex-col items-left justify-center space-y-5">
-                <h1 className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-bold text-xl">
-                  <p>
-                    <i>Software Engineer Fellow</i>, Headstarter AI
-                  </p>
-                  <i className="font-thin">Remote</i>
-                  <br></br>
-                  <i className="font-thin">July 2024 - September 2024</i>
-                </h1>
-              </span>
-              <ul className="flex flex-col items-left justify-between space-y-5 text-lg">
-                <li className="list-disc ml-5 mr-5 max-sm:ml-16 max-sm:mr-16">
-                  Built and deployed 5 AI projects using React, Next.js,
-                  Firebase, Clerk, and Vercel, incorporating best software
-                  engineering practices such as CI/CD for regression detection
-                  and iterative deployment.
-                </li>
-                <li className="list-disc ml-5 mr-5 max-sm:ml-16 max-sm:mr-16">
-                  Collaborated with and led a team of 3 to build and deploy a
-                  SaaS product that generates flashcards based on a given topic
-                  using the OpenAI API.
-                </li>
-                <li className="list-disc ml-5 mr-5 max-sm:ml-16 max-sm:mr-16">
-                  Developed a RAG-based project with a team of 3 using the
-                  OpenAI API and Pinecone that generates responses based on a
-                  provided dataset.
-                </li>
-              </ul>
-            </span>
-            <span className="grid grid-cols-2 max-sm:grid-cols-1 w-full space-y-5">
-              <span className="flex flex-col items-left justify-center space-y-5">
-                <h1 className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-bold text-xl">
-                  <p>
-                    <i>Retail Salesperson</i>, Walgreens
-                  </p>
-                  <i className="font-thin">McAllen, Texas</i>
-                  <br></br>
-                  <i className="font-thin">December 2022 - March 2023</i>
-                </h1>
-              </span>
-              <ul className="flex flex-col items-left justify-between space-y-5 text-lg">
-                <li className="list-disc ml-5 mr-5 max-sm:ml-16 max-sm:mr-16">
-                  Guided 20-25 customers/week on average with product questions
-                  or related concerns.
-                </li>
-                <li className="list-disc ml-5 mr-5 max-sm:ml-16 max-sm:mr-16">
-                  Restocked sold out products in respective bays to maintain
-                  inventory levels.
-                </li>
-                <li className="list-disc ml-5 mr-5 max-sm:ml-16 max-sm:mr-16">
-                  Displayed products in the promotional section of the store to
-                  help drive sales.
-                </li>
-              </ul>
-            </span>
+            ))}
             <br></br>
             <span className="flex flex-row items-center justify-center text-center">
               <p className="text-xl font-[900] max-sm:ml-10 max-sm:mr-10">
