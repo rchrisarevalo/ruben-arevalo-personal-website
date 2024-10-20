@@ -155,7 +155,7 @@ export default function Home() {
                   <h1 className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-bold text-xl">
                     <i>{school.school_name}</i>
                     <br></br>
-                    <i className="font-thin">August 2019 - May 2023</i>
+                    <i className="font-thin">{school.attendance_dates}</i>
                   </h1>
                   <p className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 text-lg">
                     {school.description}
