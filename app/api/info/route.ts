@@ -32,7 +32,7 @@ const GET = async () => {
 
   // Return the data.
   return NextResponse.json(
-    records,
+    records[0],
     {
       status: 200,
     }

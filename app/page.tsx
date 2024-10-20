@@ -26,7 +26,7 @@ import ViewProjectBtn from "./components/ViewProjectBtn";
 import { Info } from "./types/types.config";
 
 export default function Home() {
-  const [info, setInfo] = useState<Info[]>([])
+  const [info, setInfo] = useState<Info>([])
 
   useEffect(() => {
     ReactGA.send({
@@ -47,7 +47,8 @@ export default function Home() {
         });
   
         if (res.ok) {
-          const data: Info[] = await res.json();
+          const data: Info = await res.json();
+          console.log(data)
           setInfo(data)
         }
       } catch (error) {
@@ -148,66 +149,26 @@ export default function Home() {
             <h1 className="text-4xl font-[800] ml-16 mr-16 max-sm:ml-12 max-sm:mr-12">
               Education
             </h1>
-            <span className="grid grid-cols-2 max-sm:grid-cols-1 w-full space-y-5">
-              <span className="flex flex-col items-left justify-center space-y-5">
-                <h1 className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-bold text-xl">
-                  <i>The University of Texas - Rio Grande Valley</i>
-                  <br></br>
-                  <i className="font-thin">August 2019 - May 2023</i>
-                </h1>
-                <p className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 text-lg">
-                  I earned by Bachelor of Science in Computer Engineering from
-                  the University of Texas - Rio Grande Valley in May 2023, with
-                  my concentration focusing on software development.
-                </p>
+            {info.education?.map((school, idx) => 
+              <span key={`education-${idx}`} className="grid grid-cols-2 max-sm:grid-cols-1 w-full space-y-5">
+                <span className="flex flex-col items-left justify-center space-y-5">
+                  <h1 className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-bold text-xl">
+                    <i>{school.school_name}</i>
+                    <br></br>
+                    <i className="font-thin">August 2019 - May 2023</i>
+                  </h1>
+                  <p className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 text-lg">
+                    {school.description}
+                  </p>
+                </span>
+                <span className="flex flex-col items-center justify-center">
+                  <img
+                    src={`data:image/png;base64,${school.photo}`}
+                    className="w-[300px] h-[300px] object-cover rounded-lg"
+                  />
+                </span>
               </span>
-              <span className="flex flex-col items-center justify-center">
-                <img
-                  src={UTRGVGrad.src}
-                  className="w-[300px] h-[300px] object-cover rounded-lg"
-                />
-              </span>
-            </span>
-            <span className="grid grid-cols-2 max-sm:grid-cols-1 w-full space-y-5">
-              <span className="flex flex-col items-left justify-center space-y-5">
-                <h1 className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-bold text-xl">
-                  <i>Achieve Early College High School</i>
-                  <br></br>
-                  <i className="font-thin">August 2015 - May 2019</i>
-                </h1>
-                <p className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 text-lg">
-                  I earned my high school diploma in May 2019 from Achieve Early
-                  College High School after graduating with an associate's
-                  degree in computer science weeks prior.
-                </p>
-              </span>
-              <span className="flex flex-col items-center justify-center">
-                <img
-                  src={AECHSGrad.src}
-                  className="w-[300px] h-[300px] object-cover rounded-lg"
-                />
-              </span>
-            </span>
-            <span className="grid grid-cols-2 max-sm:grid-cols-1 w-full space-y-5">
-              <span className="flex flex-col items-left justify-center space-y-5">
-                <h1 className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-bold text-xl">
-                  <i>South Texas College</i>
-                  <br></br>
-                  <i className="font-thin">August 2015 - May 2019</i>
-                </h1>
-                <p className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 text-lg">
-                  I earned my Associate of Science in Computer Science from
-                  South Texas College in May 2019--a few weeks before graduating
-                  from high school.
-                </p>
-              </span>
-              <span className="flex flex-col items-center justify-center">
-                <img
-                  src={STCGrad.src}
-                  className="w-[300px] h-[300px] object-cover rounded-lg"
-                />
-              </span>
-            </span>
+            )}
           </section>
         </PageSection>
         <hr className="bg-slate-50 pt-1 w-full"></hr>
