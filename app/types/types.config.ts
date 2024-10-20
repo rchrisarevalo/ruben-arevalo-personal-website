@@ -17,10 +17,14 @@ export type Project = {
     description: string,
     duration: string,
     skills: string[],
-    title: string
+    title: string,
+    image: string,
+    image_alt_tag: string,
+    link: string
 }
 
 export type Info = {
+    resume_link: string,
     profile_pic: string,
     education: Education[],
     experience: Experience[],
