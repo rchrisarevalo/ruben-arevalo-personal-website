@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Key } from "react";
 
 interface SkillLabelProps {
   skillName: string;
+  key: Key
 }
 
 const SkillLabel: React.FC<SkillLabelProps> = ({ skillName }) => {

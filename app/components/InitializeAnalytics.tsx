@@ -10,6 +10,11 @@ const InitializeAnalytics = () => {
           anonymizeIp: true,
         },
       });
+      ReactGA.send({
+        hitType: "pageview",
+        page: window.location.href,
+        title: "Personal Website Page",
+      });
     }
   }, []);
 
