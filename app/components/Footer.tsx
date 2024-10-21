@@ -42,11 +42,11 @@ const Footer = () => {
             To comply with privacy regulations, such as the <a 
             className="font-extrabold" href="https://www.oag.ca.gov/privacy/ccpa" target="_blank">
              <u>California Consumer Privacy Act (CCPA)</u>
-            </a>, and the <a
+            </a> and the <a
               className="font-extrabold" href="https://www.oag.state.va.us/consumer-protection/files/tips-and-info/Virginia-Consumer-Data-Protection-Act-Summary-2-2-23.pdf"
             >
               <u>Virginia Consumer Data Protection Act (VDPA)</u>
-            </a> this notice will serve as a disclosure
+            </a>, this notice will serve as a disclosure
             to visitors that this website uses Google Analytics to collect anonymous user traffic
             data,
             which is used to determine the number
@@ -55,8 +55,8 @@ const Footer = () => {
               href="https://chromewebstore.google.com/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh?hl=en&pli=1"
               target="_blank"
             >
-              <u className="font-bold">Google Analytics Opt-out Add-on.</u>
-            </a>
+              <u className="font-bold">Google Analytics Opt-out Add-on</u>
+            </a> extension.
           </i>
         </span>
       </section>
