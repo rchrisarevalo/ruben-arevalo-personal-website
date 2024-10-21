@@ -132,6 +132,7 @@ export default function Home() {
                       <span className="flex flex-col items-center justify-center">
                         <img
                           src={education.photo}
+                          alt={`Ruben Arevalo Education ${education_idx}`}
                           className="w-[300px] h-[300px] object-cover rounded-lg pointer-events-none"
                         />
                       </span>
