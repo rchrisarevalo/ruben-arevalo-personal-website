@@ -47,7 +47,7 @@ const Footer = () => {
             >
               <u>Virginia Consumer Data Protection Act (VCDPA)</u>
             </a>, this notice will serve as a disclosure
-            to visitors that this website uses Google Analytics to collect anonymous user traffic
+            to visitors that this website uses Google Analytics and Vercel Analytics to collect anonymous user traffic
             data,
             which is used to determine the number
             of active users, new users, and event counts. If you decide to not allow your
