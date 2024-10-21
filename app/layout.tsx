@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import InitializeAnalytics from "./components/InitializeAnalytics";
 import { Analytics } from "@vercel/analytics/react";
+import InitializeAdSense from "./components/InitializeAdSense";
 
 export const metadata: Metadata = {
   authors: {
@@ -25,6 +26,7 @@ export default function RootLayout({
       >
         {children}
         <InitializeAnalytics />
+        <InitializeAdSense />
         <Analytics mode={'production'} />
       </body>
     </html>
