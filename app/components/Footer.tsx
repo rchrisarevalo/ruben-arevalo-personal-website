@@ -45,7 +45,7 @@ const Footer = () => {
             </a> and the <a
               className="font-extrabold" href="https://www.oag.state.va.us/consumer-protection/files/tips-and-info/Virginia-Consumer-Data-Protection-Act-Summary-2-2-23.pdf"
             >
-              <u>Virginia Consumer Data Protection Act (VDPA)</u>
+              <u>Virginia Consumer Data Protection Act (VCDPA)</u>
             </a>, this notice will serve as a disclosure
             to visitors that this website uses Google Analytics to collect anonymous user traffic
             data,
