@@ -152,7 +152,7 @@ export default function Home() {
                     >
                       <span className="flex flex-col items-left justify-center space-y-5">
                         <h1 className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-bold text-xl">
-                          <i>{exp.title}</i>, {exp.employer}
+                          <i>{exp.title}</i>{exp.employer.length != 0 && ','} {exp.employer}
                           <br></br>
                           <i className="font-thin">{exp.type}</i>
                           <br></br>
