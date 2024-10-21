@@ -30,7 +30,7 @@ export default function Home() {
                       className="w-[250px] h-[250px] object-contain rounded-full pointer-events-none"
                     />
                     <br></br>
-                    <h1 className="text-3xl font-bold uppercase tracking-wider">
+                    <h1 className="text-4xl font-bold uppercase tracking-wider">
                       Ruben Arevalo
                     </h1>
                     <p className="text-lg font-thin tracking-wide">
