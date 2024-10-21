@@ -59,9 +59,9 @@ export default function Home() {
               <PageSection id="about">
                 <section className="grid grid-cols-2 max-sm:grid-cols-1 w-full">
                   <span className="text-center space-y-2 flex items-start justify-center flex-col">
-                    <h1 className="text-4xl font-[800] ml-16 mr-16 max-sm:ml-12 max-sm:mr-12">
+                    <h2 className="text-4xl font-[800] ml-16 mr-16 max-sm:ml-12 max-sm:mr-12">
                       About Me
-                    </h1>
+                    </h2>
                     <p className="text-lg text-left ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-[200]">
                       My name is Ruben Arevalo, and I am a software engineer
                       from McAllen, Texas.
@@ -109,22 +109,22 @@ export default function Home() {
               <hr className="bg-slate-50 pt-1 w-full"></hr>
               <PageSection id="education">
                 <section className="grid grid-cols-1 max-sm:grid-cols-1 w-full max-sm:space-y-10">
-                  <h1 className="text-4xl font-[800] ml-16 mr-16 max-sm:ml-12 max-sm:mr-12">
+                  <h2 className="text-4xl font-[800] ml-16 mr-16 max-sm:ml-12 max-sm:mr-12">
                     Education
-                  </h1>
+                  </h2>
                   {info.education?.map((education, education_idx) => (
                     <span
                       key={`education-${education_idx}`}
                       className="grid grid-cols-2 max-sm:grid-cols-1 w-full space-y-5"
                     >
                       <span className="flex flex-col items-left justify-center space-y-5">
-                        <h1 className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-bold text-xl">
+                        <h2 className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-bold text-xl">
                           <i>{education.school_name}</i>
                           <br></br>
                           <i className="font-thin">
                             {education.attendance_dates}
                           </i>
-                        </h1>
+                        </h2>
                         <p className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 text-lg">
                           {education.description}
                         </p>
@@ -142,22 +142,22 @@ export default function Home() {
               <hr className="bg-slate-50 pt-1 w-full"></hr>
               <PageSection id="experience">
                 <section className="grid grid-cols-1 max-sm:grid-cols-1 w-full max-sm:space-y-10 space-y-12">
-                  <h1 className="text-4xl font-[800] ml-16 mr-16 max-sm:ml-12 max-sm:mr-12">
+                  <h2 className="text-4xl font-[800] ml-16 mr-16 max-sm:ml-12 max-sm:mr-12">
                     Experience
-                  </h1>
+                  </h2>
                   {info.experience?.map((exp, idx) => (
                     <span
                       key={`exp-${idx}`}
                       className="grid grid-cols-2 max-sm:grid-cols-1 w-full space-y-5"
                     >
                       <span className="flex flex-col items-left justify-center space-y-5">
-                        <h1 className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-bold text-xl">
+                        <h2 className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-bold text-xl">
                           <i>{exp.title}</i>{exp.employer.length != 0 && ','} {exp.employer}
                           <br></br>
                           <i className="font-thin">{exp.type}</i>
                           <br></br>
                           <i className="font-thin">{exp.duration}</i>
-                        </h1>
+                        </h2>
                       </span>
                       <ul className="flex flex-col items-left justify-between space-y-5 text-lg">
                         {exp.responsibilities.map((res, res_idx) => (
@@ -190,9 +190,9 @@ export default function Home() {
               <hr className="bg-slate-50 pt-1 w-full"></hr>
               <PageSection id="projects">
                 <section className="grid grid-cols-1 max-sm:grid-cols-1 w-full">
-                  <h1 className="text-4xl font-[800] ml-16 mr-16 max-sm:ml-12 max-sm:mr-12">
+                  <h2 className="text-4xl font-[800] ml-16 mr-16 max-sm:ml-12 max-sm:mr-12">
                     Projects
-                  </h1>
+                  </h2>
                   <br></br>
                   <span className="grid grid-cols-2 max-sm:grid-cols-1 items-center w-full space-y-5 max-sm:space-y-32">
                     {info.projects.map((proj, proj_idx) => (
@@ -206,7 +206,7 @@ export default function Home() {
                           alt={proj.image_alt_tag}
                         />
                         <br></br>
-                        <h1 className="text-3xl font-[900]">{proj.title}</h1>
+                        <h2 className="text-3xl font-[900]">{proj.title}</h2>
                         <i className="font-thin text-lg">{proj.duration}</i>
                         <p className="text-lg">{proj.description}</p>
                         <br></br>
@@ -228,10 +228,10 @@ export default function Home() {
             </>
           ) : (
             <span className="flex flex-col items-center justify-center h-[100vh] space-y-5">
-              <h1 className="text-3xl text-center max-sm:ml-12 max-sm:mr-12">
+              <h2 className="text-3xl text-center max-sm:ml-12 max-sm:mr-12">
                 There was an error loading the content. <br></br> Please reload
                 the page again.
-              </h1>
+              </h2>
               <button
                 onClick={() => window.location.reload()}
                 className="p-3 pl-7 pr-7 bg-white text-black font-[900] rounded-3xl"
@@ -242,7 +242,7 @@ export default function Home() {
           )
         ) : (
           <span className="flex items-center justify-center h-[100vh]">
-            <h1 className="text-3xl">Loading...</h1>
+            <h2 className="text-3xl">Loading...</h2>
           </span>
         )}
       </main>
