@@ -24,6 +24,13 @@ const Nav = () => {
           </li>
         </ul>
       </span>
+      <span className="text-lg font-thin max-sm:hidden">
+        <ul className="flex flex-row gap-2 cursor-pointer">
+          <li>
+            <Link href="#privacy" className="p-2 pl-6 pr-6 font-extrabold rounded-lg transition ease-in-out hover:bg-white hover:text-black">Privacy Notice</Link>
+          </li>
+        </ul>
+      </span>
     </nav>
   );
 };
