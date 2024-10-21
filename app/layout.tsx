@@ -7,8 +7,8 @@ export const metadata: Metadata = {
   authors: {
     name: 'Ruben Arevalo'
   },
-  title: "Ruben Arevalo",
-  description: "Software Engineer",
+  title: "Ruben Arevalo - Software Engineer",
+  description: "Software Engineer, coding hobbyist, and lover of sky photography",
   keywords: 'Ruben Arevalo, Ruben C. Arevalo, Software Developer, Ruben Arevalo Software Engineer',
   metadataBase: new URL('https://rubenarevalo.com')
 };
