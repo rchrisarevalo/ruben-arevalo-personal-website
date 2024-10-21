@@ -49,7 +49,7 @@ const Footer = () => {
             </a>, this notice will serve as a disclosure
             to visitors that this website uses Google Analytics and Vercel Analytics to collect anonymous user traffic
             data,
-            which is used to determine the number
+            which are used to determine the number
             of active users, new users, and event counts. If you decide to not allow your
             data to be collected, you can opt out by installing the <a
               href="https://chromewebstore.google.com/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh?hl=en&pli=1"
