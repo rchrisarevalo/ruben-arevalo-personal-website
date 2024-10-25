@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     name: 'Ruben Arevalo'
   },
   title: "Ruben Arevalo - Software Engineer",
-  description: "Software Engineer, coding hobbyist, and lover of sky photography",
+  description: "A 23 year old RGV native, software engineer, coding hobbyist, and lover of sky photography.",
   keywords: 'Ruben Arevalo, Ruben C. Arevalo, Software Developer, Ruben Arevalo Software Engineer',
   metadataBase: new URL('https://rubenarevalo.com')
 };
