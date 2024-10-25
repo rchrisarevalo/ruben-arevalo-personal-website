@@ -225,7 +225,6 @@ export default function Home() {
                   </span>
                 </section>
               </PageSection>
-              <Footer />
             </>
           ) : (
             <span className="flex flex-col items-center justify-center h-[100vh] space-y-5">
@@ -246,6 +245,7 @@ export default function Home() {
             <h2 className="text-3xl">Loading...</h2>
           </span>
         )}
+        <Footer />
       </main>
     </div>
   );
