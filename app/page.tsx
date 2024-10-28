@@ -38,17 +38,17 @@ export default function Home() {
                     </p>
                   </span>
                   <span className="text-center space-y-2 flex flex-col items-center justify-center">
-                    <ul className="list-none space-y-5 max-sm:space-y-2 max-sm:mt-10">
-                      <li className="p-3 pl-5 pr-5 rounded-xl border-2 border-solid border-white">
-                        <a href={info.resume_link} target="_blank" download>
+                    <ul className="list-none flex flex-col justify-between max-sm:space-y-2 max-sm:mt-10 w-[100%] max-sm:w-[100%] h-full text-[20px] max-sm:text-[20px]">
+                      <li className="transition ease-in-out delay-75 hover:bg-white hover:text-black p-10 font-[900]">
+                        <a href={info.resume_link} className="p-10 w-[100%]" target="_blank" download>
                           View Resume
                         </a>
                       </li>
-                      <li className="p-3 pl-5 pr-5 rounded-xl border-2 border-solid border-white">
-                        <Link href="#about">About Me</Link>
+                      <li className="transition ease-in-out delay-75 hover:bg-white hover:text-black p-10 font-[900]">
+                        <Link href="#about" className="p-10 w-[100%]">About Me</Link>
                       </li>
-                      <li className="p-3 pl-5 pr-5 rounded-xl border-2 border-solid border-white">
-                        <Link href="mailto:ruben.c.arevalo@gmail.com">
+                      <li className="transition ease-in-out delay-75 hover:bg-white hover:text-black p-10 font-[900]">
+                        <Link href="mailto:ruben.c.arevalo@gmail.com" className="p-10 w-[100%]">
                           Contact Me
                         </Link>
                       </li>
@@ -153,7 +153,8 @@ export default function Home() {
                     >
                       <span className="flex flex-col items-left justify-center space-y-5">
                         <h2 className="ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-bold text-xl">
-                          <i>{exp.title}</i>{exp.employer.length != 0 && ','} {exp.employer}
+                          <i>{exp.title}</i>
+                          {exp.employer.length != 0 && ","} {exp.employer}
                           <br></br>
                           <i className="font-thin">{exp.type}</i>
                           <br></br>
