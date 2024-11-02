@@ -39,15 +39,15 @@ export default function Home() {
                   </span>
                   <span className="text-center space-y-2 flex flex-col items-center justify-center">
                     <ul className="list-none flex flex-col justify-between max-sm:space-y-2 max-sm:mt-10 w-[100%] max-sm:w-[100%] h-full text-[20px] max-sm:text-[20px]">
-                      <li className="transition ease-in-out delay-75 hover:bg-white hover:text-black p-10 font-[400] uppercase tracking-widest">
+                      <li className="transition ease-in-out delay-75 hover:bg-white hover:text-black p-10 font-[400] uppercase tracking-widest text-[18px]">
                         <a href={info.resume_link} className="p-10 w-[100%]" target="_blank" download>
                           View Resume
                         </a>
                       </li>
-                      <li className="transition ease-in-out delay-75 hover:bg-white hover:text-black p-10 font-[400] uppercase tracking-widest">
+                      <li className="transition ease-in-out delay-75 hover:bg-white hover:text-black p-10 font-[400] uppercase tracking-widest text-[18px]">
                         <Link href="#about" className="p-10 w-[100%]">About Me</Link>
                       </li>
-                      <li className="transition ease-in-out delay-75 hover:bg-white hover:text-black p-10 font-[400] uppercase tracking-widest">
+                      <li className="transition ease-in-out delay-75 hover:bg-white hover:text-black p-10 font-[400] uppercase tracking-widest text-[18px]">
                         <Link href="mailto:ruben.c.arevalo@gmail.com" className="p-10 w-[100%]">
                           Contact Me
                         </Link>
