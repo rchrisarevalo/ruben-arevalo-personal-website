@@ -1,6 +1,6 @@
 "use client";
 import Nav from "./components/Nav";
-import "@fontsource/raleway";
+import "@fontsource/lato";
 import PageSection from "./components/PageSection";
 import Coding from "./images/me-coding-express.jpg";
 import SnowDay from "./images/snow.jpg";
@@ -15,7 +15,7 @@ export default function Home() {
   const { info, loading, error } = useFetchInfo();
 
   return (
-    <div className="bg-[#020c27] font-['Raleway'] items-center justify-items-center min-h-screen w-full">
+    <div className="bg-[#020c27] font-['Lato'] items-center justify-items-center min-h-screen w-full">
       <main className="flex flex-col items-center text-white">
         <Nav />
         {!loading ? (
@@ -40,15 +40,25 @@ export default function Home() {
                   <span className="text-center space-y-2 flex flex-col items-center justify-center">
                     <ul className="list-none flex flex-col justify-between max-sm:space-y-2 max-sm:mt-10 w-[100%] max-sm:w-[100%] h-full text-[20px] max-sm:text-[20px]">
                       <li className="transition ease-in-out delay-75 hover:bg-white hover:text-black p-10 font-[400] uppercase tracking-widest text-[18px]">
-                        <a href={info.resume_link} className="p-10 w-[100%]" target="_blank" download>
+                        <a
+                          href={info.resume_link}
+                          className="p-10 w-[100%]"
+                          target="_blank"
+                          download
+                        >
                           View Resume
                         </a>
                       </li>
                       <li className="transition ease-in-out delay-75 hover:bg-white hover:text-black p-10 font-[400] uppercase tracking-widest text-[18px]">
-                        <Link href="#about" className="p-10 w-[100%]">About Me</Link>
+                        <Link href="#about" className="p-10 w-[100%]">
+                          About Me
+                        </Link>
                       </li>
                       <li className="transition ease-in-out delay-75 hover:bg-white hover:text-black p-10 font-[400] uppercase tracking-widest text-[18px]">
-                        <Link href="mailto:ruben.c.arevalo@gmail.com" className="p-10 w-[100%]">
+                        <Link
+                          href="mailto:ruben.c.arevalo@gmail.com"
+                          className="p-10 w-[100%]"
+                        >
                           Contact Me
                         </Link>
                       </li>
@@ -196,33 +206,39 @@ export default function Home() {
                     Projects
                   </h2>
                   <br></br>
-                  <span className="grid grid-cols-2 max-sm:grid-cols-1 items-center w-full space-y-5 max-sm:space-y-32">
-                    {info.projects.map((proj, proj_idx) => (
-                      <span
-                        key={`proj-${proj_idx}`}
-                        className="flex flex-col ml-16 mr-16 max-sm:ml-10 max-sm:mr-10 items-left text-left justify-start space-y-2"
-                      >
-                        <img
-                          src={proj.image}
-                          className="w-[500px] h-[500px] object-cover items-center rounded-2xl pointer-events-none"
-                          alt={proj.image_alt_tag}
-                        />
-                        <br></br>
-                        <h2 className="text-3xl font-[900]">{proj.title}</h2>
-                        <i className="font-thin text-lg">{proj.duration}</i>
-                        <p className="text-lg">{proj.description}</p>
-                        <br></br>
-                        <span className="max-sm:grid max-sm:grid-cols-3 flex flex-row flex-wrap">
-                          {proj.skills.map((skill, skill_idx) => (
-                            <SkillLabel
-                              key={`proj-${proj_idx}-skill-${skill_idx}`}
-                              skillName={skill}
+                  <span className="flex items-center justify-center">
+                    <span className="grid grid-cols-2 justify-center max-sm:grid-cols-1 items-center place-items-center">
+                      {info.projects.map((proj, proj_idx) => (
+                        <span
+                          key={`proj-${proj_idx}`}
+                          className="w-full h-full max-sm:w-[85%] items-left text-left"
+                        >
+                          <section className="flex flex-col ml-10 mr-10 pt-10 pb-10 max-sm:ml-2 max-sm:mr-2 h-full justify-between">
+                            <img
+                              src={proj.image}
+                              className="w-[500px] h-[500px] object-cover items-center rounded-2xl pointer-events-none"
+                              alt={proj.image_alt_tag}
                             />
-                          ))}
+                            <br></br>
+                            <h2 className="text-3xl font-[900]">
+                              {proj.title}
+                            </h2>
+                            <i className="font-thin text-lg">{proj.duration}</i>
+                            <p className="text-lg">{proj.description}</p>
+                            <br></br>
+                            <span className="max-sm:grid max-sm:grid-cols-3 flex flex-row flex-wrap">
+                              {proj.skills.map((skill, skill_idx) => (
+                                <SkillLabel
+                                  key={`proj-${proj_idx}-skill-${skill_idx}`}
+                                  skillName={skill}
+                                />
+                              ))}
+                            </span>
+                            <ViewProjectBtn link={proj.link} />
+                          </section>
                         </span>
-                        <ViewProjectBtn link={proj.link} />
-                      </span>
-                    ))}
+                      ))}
+                    </span>
                   </span>
                 </section>
               </PageSection>
