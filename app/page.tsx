@@ -26,7 +26,7 @@ export default function Home() {
                   <span className="text-center space-y-2 flex items-center flex-col">
                     <img
                       alt="Ruben Arevalo"
-                      src={info.profile_pic}
+                      src={"https://firebasestorage.googleapis.com/v0/b/ruben-arevalo.appspot.com/o/Profile%20Pic%20(November%202024).jpg?alt=media&token=a1ad3d22-3b0e-4760-9c2d-71fd4429cfef"}
                       className="w-[250px] h-[250px] object-contain rounded-full pointer-events-none"
                     />
                     <br></br>
