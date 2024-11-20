@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fontsource-variable/raleway": "^5.1.0",
+    "@fontsource/lato": "^5.1.0",
     "@fontsource/poppins": "^5.1.0",
     "@fontsource/raleway": "^5.1.0",
     "@fontsource/roboto-slab": "^5.1.0",
