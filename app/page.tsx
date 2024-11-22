@@ -18,105 +18,105 @@ export default function Home() {
     <div className="bg-[#020c27] font-['Lato'] items-center justify-items-center min-h-screen w-full">
       <main className="flex flex-col items-center text-white">
         <Nav />
+        <PageSection id="home">
+          <section className="grid grid-cols-2 max-sm:grid-cols-1 w-full">
+            <span className="text-center space-y-2 flex items-center flex-col">
+              <img
+                alt="Ruben Arevalo"
+                src={
+                  "https://firebasestorage.googleapis.com/v0/b/ruben-arevalo.appspot.com/o/Profile%20Pic%20(November%202024).jpg?alt=media&token=a1ad3d22-3b0e-4760-9c2d-71fd4429cfef"
+                }
+                className="w-[250px] h-[250px] object-contain rounded-full pointer-events-none"
+              />
+              <br></br>
+              <h1 className="text-4xl font-bold uppercase tracking-wider">
+                Ruben Arevalo
+              </h1>
+              <p className="text-lg font-thin tracking-wide">
+                Software Engineer
+              </p>
+            </span>
+            <span className="text-center space-y-2 flex flex-col items-center justify-center">
+              <ul className="list-none flex flex-col justify-between max-sm:space-y-2 max-sm:mt-10 w-[100%] max-sm:w-[100%] h-full text-[20px] max-sm:text-[20px]">
+                <li className="transition ease-in-out delay-75 hover:bg-white hover:text-black p-10 font-[400] uppercase tracking-widest text-[18px]">
+                  <a
+                    href={info.resume_link}
+                    className="p-10 w-[100%]"
+                    target="_blank"
+                    download
+                  >
+                    View Resume
+                  </a>
+                </li>
+                <li className="transition ease-in-out delay-75 hover:bg-white hover:text-black p-10 font-[400] uppercase tracking-widest text-[18px]">
+                  <Link href="#about" className="p-10 w-[100%]">
+                    About Me
+                  </Link>
+                </li>
+                <li className="transition ease-in-out delay-75 hover:bg-white hover:text-black p-10 font-[400] uppercase tracking-widest text-[18px]">
+                  <Link
+                    href="mailto:ruben.c.arevalo@gmail.com"
+                    className="p-10 w-[100%]"
+                  >
+                    Contact Me
+                  </Link>
+                </li>
+              </ul>
+            </span>
+          </section>
+        </PageSection>
+        <PageSection id="about">
+          <section className="grid grid-cols-2 max-sm:grid-cols-1 w-full">
+            <span className="text-center space-y-2 flex items-start justify-center flex-col">
+              <h2 className="text-4xl font-[800] ml-16 mr-16 max-sm:ml-12 max-sm:mr-12">
+                About Me
+              </h2>
+              <p className="text-lg text-left ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-[200]">
+                My name is Ruben Arevalo, and I am a software engineer from
+                McAllen, Texas.
+              </p>
+              <p className="text-lg text-left ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-[200]">
+                As someone who has been coding for the past 7 years since my
+                junior year of high school back in 2017, I have learned a lot of
+                lessons along the way, and have taken a keen interest in
+                software development.
+              </p>
+              <p className="text-lg text-left ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-[200]">
+                More recently, I have also taken an interest in integrating
+                generative AI into products to help improve and streamline
+                processes, such as determining which clothes fit best for you
+                for a date when using a dating app, or determining how many
+                calories you should consume a day when using a calorie tracker.
+              </p>
+              <p className="text-lg text-left ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-[200]">
+                I strive to improve and learn new lessons every day, as well as
+                continuously hone my craft in programming so that I can apply
+                what I learned into finding solutions for real-world problems.
+              </p>
+            </span>
+            <span className="text-center space-y-2 grid grid-cols-2 max-sm:grid-cols-1 place-items-center max-sm:mt-24 max-sm:mb-24">
+              <img
+                src={Coding.src}
+                alt="Ruben Arevalo Coding"
+                className="w-[300px] h-[300px] object-cover rounded-lg pointer-events-none"
+              />
+              <img
+                src={SnowDay.src}
+                alt="Ruben Arevalo Snow Day 2017"
+                className="w-[300px] h-[300px] object-cover rounded-lg pointer-events-none"
+              />
+              <img
+                src={PersonalPhotography.src}
+                alt="Ruben Arevalo Photography 1"
+                className="w-[300px] h-[300px] object-cover rounded-lg pointer-events-none"
+              />
+            </span>
+          </section>
+        </PageSection>
+        <hr className="bg-slate-50 pt-1 w-full"></hr>
         {!loading ? (
           !error ? (
             <>
-              <PageSection id="home">
-                <section className="grid grid-cols-2 max-sm:grid-cols-1 w-full">
-                  <span className="text-center space-y-2 flex items-center flex-col">
-                    <img
-                      alt="Ruben Arevalo"
-                      src={"https://firebasestorage.googleapis.com/v0/b/ruben-arevalo.appspot.com/o/Profile%20Pic%20(November%202024).jpg?alt=media&token=a1ad3d22-3b0e-4760-9c2d-71fd4429cfef"}
-                      className="w-[250px] h-[250px] object-contain rounded-full pointer-events-none"
-                    />
-                    <br></br>
-                    <h1 className="text-4xl font-bold uppercase tracking-wider">
-                      Ruben Arevalo
-                    </h1>
-                    <p className="text-lg font-thin tracking-wide">
-                      Software Engineer
-                    </p>
-                  </span>
-                  <span className="text-center space-y-2 flex flex-col items-center justify-center">
-                    <ul className="list-none flex flex-col justify-between max-sm:space-y-2 max-sm:mt-10 w-[100%] max-sm:w-[100%] h-full text-[20px] max-sm:text-[20px]">
-                      <li className="transition ease-in-out delay-75 hover:bg-white hover:text-black p-10 font-[400] uppercase tracking-widest text-[18px]">
-                        <a
-                          href={info.resume_link}
-                          className="p-10 w-[100%]"
-                          target="_blank"
-                          download
-                        >
-                          View Resume
-                        </a>
-                      </li>
-                      <li className="transition ease-in-out delay-75 hover:bg-white hover:text-black p-10 font-[400] uppercase tracking-widest text-[18px]">
-                        <Link href="#about" className="p-10 w-[100%]">
-                          About Me
-                        </Link>
-                      </li>
-                      <li className="transition ease-in-out delay-75 hover:bg-white hover:text-black p-10 font-[400] uppercase tracking-widest text-[18px]">
-                        <Link
-                          href="mailto:ruben.c.arevalo@gmail.com"
-                          className="p-10 w-[100%]"
-                        >
-                          Contact Me
-                        </Link>
-                      </li>
-                    </ul>
-                  </span>
-                </section>
-              </PageSection>
-              <PageSection id="about">
-                <section className="grid grid-cols-2 max-sm:grid-cols-1 w-full">
-                  <span className="text-center space-y-2 flex items-start justify-center flex-col">
-                    <h2 className="text-4xl font-[800] ml-16 mr-16 max-sm:ml-12 max-sm:mr-12">
-                      About Me
-                    </h2>
-                    <p className="text-lg text-left ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-[200]">
-                      My name is Ruben Arevalo, and I am a software engineer
-                      from McAllen, Texas.
-                    </p>
-                    <p className="text-lg text-left ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-[200]">
-                      As someone who has been coding for the past 7 years since
-                      my junior year of high school back in 2017, I have learned
-                      a lot of lessons along the way, and have taken a keen
-                      interest in software development.
-                    </p>
-                    <p className="text-lg text-left ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-[200]">
-                      More recently, I have also taken an interest in
-                      integrating generative AI into products to help improve
-                      and streamline processes, such as determining which
-                      clothes fit best for you for a date when using a dating
-                      app, or determining how many calories you should consume a
-                      day when using a calorie tracker.
-                    </p>
-                    <p className="text-lg text-left ml-16 mr-16 max-sm:ml-12 max-sm:mr-12 font-[200]">
-                      I strive to improve and learn new lessons every day, as
-                      well as continuously hone my craft in programming so that
-                      I can apply what I learned into finding solutions for
-                      real-world problems.
-                    </p>
-                  </span>
-                  <span className="text-center space-y-2 grid grid-cols-2 max-sm:grid-cols-1 place-items-center max-sm:mt-24 max-sm:mb-24">
-                    <img
-                      src={Coding.src}
-                      alt="Ruben Arevalo Coding"
-                      className="w-[300px] h-[300px] object-cover rounded-lg pointer-events-none"
-                    />
-                    <img
-                      src={SnowDay.src}
-                      alt="Ruben Arevalo Snow Day 2017"
-                      className="w-[300px] h-[300px] object-cover rounded-lg pointer-events-none"
-                    />
-                    <img
-                      src={PersonalPhotography.src}
-                      alt="Ruben Arevalo Photography 1"
-                      className="w-[300px] h-[300px] object-cover rounded-lg pointer-events-none"
-                    />
-                  </span>
-                </section>
-              </PageSection>
-              <hr className="bg-slate-50 pt-1 w-full"></hr>
               <PageSection id="education">
                 <section className="grid grid-cols-1 max-sm:grid-cols-1 w-full max-sm:space-y-10">
                   <h2 className="text-4xl font-[800] ml-16 mr-16 max-sm:ml-12 max-sm:mr-12">
@@ -193,6 +193,15 @@ export default function Home() {
                         className="text-blue-700 underline"
                       >
                         LinkedIn profile
+                      </a>
+                      {" "}
+                      or my {" "}
+                      <a
+                        href="https://app.headstarter.co/profile/rchrisarevalo"
+                        target="_none"
+                        className="text-blue-700 underline"
+                      >
+                        previous fellowship profile
                       </a>
                       !
                     </p>
