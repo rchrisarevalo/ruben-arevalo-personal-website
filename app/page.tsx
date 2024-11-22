@@ -5,6 +5,7 @@ import PageSection from "./components/PageSection";
 import Coding from "./images/me-coding-express.jpg";
 import SnowDay from "./images/snow.jpg";
 import PersonalPhotography from "./images/personal-photography-3.jpg";
+import PumpkinPatch from './images/pumpkin-patch-2024.jpg';
 import Link from "next/link";
 import SkillLabel from "./components/SkillLabel";
 import Footer from "./components/Footer";
@@ -108,6 +109,11 @@ export default function Home() {
               <img
                 src={PersonalPhotography.src}
                 alt="Ruben Arevalo Photography 1"
+                className="w-[300px] h-[300px] object-cover rounded-lg pointer-events-none"
+              />
+              <img 
+                src={PumpkinPatch.src}
+                alt="Ruben Arevalo Pumpkin Patch 2024"
                 className="w-[300px] h-[300px] object-cover rounded-lg pointer-events-none"
               />
             </span>
