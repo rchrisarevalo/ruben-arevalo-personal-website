@@ -70,7 +70,17 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({ open, setOpen }) => {
             Projects
           </Link>
         </li>
+        <li>
+          <Link
+            className="p-2 pl-6 pr-6 rounded-lg transition ease-in-out hover:bg-white hover:text-black font-[300] uppercase tracking-widest text-[16px]"
+            href="#privacy"
+            onClick={() => setOpen(false)}
+          >
+            Privacy Notice
+          </Link>
+        </li>
       </ul>
+      
     </nav>
   );
 };
